@@ -3,10 +3,10 @@ import QtQuick.Window 2.12
 
 Window {
     visible: true
-    width: 800
-    height: 600
+    width: main.width
+    height: main.height
     title: qsTr("Hello World")
     Main {
-
+        id:main
     }
 }
