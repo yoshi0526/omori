@@ -6,7 +6,7 @@ Item {
     height: 30
     Rectangle {
         id:bkRect
-        color: "#3a0e0e"
+        color: "#3d3f47"
         anchors.fill: parent
         Text {
             id: title

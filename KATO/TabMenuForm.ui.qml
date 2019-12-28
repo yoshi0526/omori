@@ -11,13 +11,18 @@ Item {
         x: 0
         y: 0
         width: 400
-        height: 40
+        height: 30
         clip: true
+
         Repeater {
             model: ["Unten", "Menu", "tyousei", "Ondo", "Switch", "Manual", "Products"]
             TabButton {
                 text: modelData
                 width: Math.max(100, tabBar.width / 6)
+                height: tabBar.height
+                background: Rectangle {
+                    color: tabBar.currentIndex == index ? "#9c95a0" : "#2f979b"
+                }
             }
         }
     }
@@ -31,9 +36,8 @@ Item {
         currentIndex: tabBar.currentIndex
         Item {
             id: item1
-            Rectangle {
+            Operation {
                 anchors.fill: parent
-                color: "red"
             }
         }
 

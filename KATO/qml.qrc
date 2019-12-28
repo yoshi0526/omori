@@ -6,5 +6,10 @@
         <file>Main.qml</file>
         <file>MainForm.ui.qml</file>
         <file>Header.qml</file>
+        <file>PageForm.ui.qml</file>
+        <file>Operation.qml</file>
+        <file>OperationForm.ui.qml</file>
+        <file>MyBtn.qml</file>
+        <file>MyBtnForm.ui.qml</file>
     </qresource>
 </RCC>
