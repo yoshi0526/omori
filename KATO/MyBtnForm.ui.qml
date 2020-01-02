@@ -6,6 +6,7 @@ Item {
     height: 40
     property alias btnTxt: btnTxt
     property bool reverse: false
+    property alias bodyColor: body.color
     state: !reverse ? "released" : "pushed"
     Rectangle {
         id: body

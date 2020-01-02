@@ -14,5 +14,8 @@
         <file>Conveyor.qml</file>
         <file>ConveyorForm.ui.qml</file>
         <file>FooterBtns.ui.qml</file>
+        <file>ConveyorModel.qml</file>
+        <file>ConveyorDelegate.qml</file>
+        <file>ConveyorListHeader.qml</file>
     </qresource>
 </RCC>

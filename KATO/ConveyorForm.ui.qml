@@ -24,11 +24,25 @@ PageForm {
         msgTxt4.font.pixelSize: 30
     }
 
-    RowLayout {}
+    ListView {
+        id: listView
+        clip: true
+        focus: true
+        x: 0
+        y: 109
+        width: 400
+        height: 371
+        header: ConveyorListHeader {
+            z: 5
+        }
+        headerPositioning: ListView.OverlayHeader
+        model: ConveyorModel {}
+        delegate: ConveyorDelegate {}
+    }
 
     ColumnLayout {
-        x: 34
-        y: 75
+        x: 35
+        y: 44
 
         Text {
             id: currentTxt
@@ -44,8 +58,8 @@ PageForm {
     }
 
     RowLayout {
-        x: 246
-        y: 85
+        x: 247
+        y: 54
         spacing: 9
 
         Text {
