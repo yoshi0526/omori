@@ -8,12 +8,33 @@ Item {
         id: delegateRow
         anchors.fill: parent
         spacing: 1
-        MyBtn {
+        Rectangle {
             id: idBtn
             width: 40
             height: 40
-            btnTxt.text: index
-            reverse: true
+            radius: 5
+            border.width: 2
+            color: converyDelegate.ListView.isCurrentItem ? "#e47d15":"#01a0a0"
+            border.color: "#037878"
+            Text {
+                color: "#ffffff"
+                anchors.fill: parent
+                text: index
+                anchors.rightMargin: 0
+                font.pointSize: 16
+                verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    listView.currentIndex=index
+                    console.log("clicked index:"+ index + " currentIndex:" +
+                           listView.currentIndex
+                                + "isCurent?+" + converyDelegate.ListView.isCurrentItem )
+                }
+            }
+
         }
         Rectangle {
             id: nameRect
@@ -57,14 +78,14 @@ Item {
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignRight
             }
-//            color: index%2==1 ? "white":"#a3c2c3"
-            color: ListView.isCurrentItem ? "red":"white"
+            color: index%2==1 ? "white":"#a3c2c3"
+//            color: converyDelegate.ListView.isCurrentItem ? "red":"white"
         }
     }
 }
 
 /*##^##
 Designer {
-    D{i:3;anchors_width:200}
+    D{i:5;anchors_width:200}
 }
 ##^##*/

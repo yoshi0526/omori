@@ -33,7 +33,7 @@ PageForm {
         width: 400
         height: 371
         header: ConveyorListHeader {
-            z: 5
+            z: 2
         }
         headerPositioning: ListView.OverlayHeader
         model: ConveyorModel {}

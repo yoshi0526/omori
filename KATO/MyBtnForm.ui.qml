@@ -4,9 +4,9 @@ Item {
     id: element
     width: 80
     height: 40
+    property alias mouseArea: mouseArea
     property alias btnTxt: btnTxt
     property bool reverse: false
-    property alias bodyColor: body.color
     state: !reverse ? "released" : "pushed"
     Rectangle {
         id: body
@@ -74,3 +74,10 @@ Item {
         }
     ]
 }
+
+/*##^##
+Designer {
+    D{i:0;height:40;width:40}
+}
+##^##*/
+
