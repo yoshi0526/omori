@@ -7,6 +7,8 @@ Item {
     property alias mouseArea: mouseArea
     property alias btnTxt: btnTxt
     property bool reverse: false
+    property color baseColor: "#01a0a0"
+    property color borderColor: "#037878"
     state: !reverse ? "released" : "pushed"
     Rectangle {
         id: body
@@ -50,12 +52,12 @@ Item {
 
             PropertyChanges {
                 target: btnTxt
-                color: "#01a0a0"
+                color: baseColor
             }
 
             PropertyChanges {
                 target: body
-                border.color: "#01a0a0"
+                border.color: baseColor
             }
         },
         State {
@@ -63,8 +65,8 @@ Item {
 
             PropertyChanges {
                 target: body
-                color: "#01a0a0"
-                border.color: "#037878"
+                color: baseColor
+                border.color: borderColor
             }
 
             PropertyChanges {

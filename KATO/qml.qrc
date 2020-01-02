@@ -17,5 +17,10 @@
         <file>ConveyorModel.qml</file>
         <file>ConveyorDelegate.qml</file>
         <file>ConveyorListHeader.qml</file>
+        <file>MenuContents.qml</file>
+        <file>AdjustContent.qml</file>
+        <file>AdjustModel.qml</file>
+        <file>AdjustDelegate.qml</file>
+        <file>TempContents.qml</file>
     </qresource>
 </RCC>

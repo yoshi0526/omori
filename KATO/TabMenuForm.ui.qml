@@ -58,24 +58,21 @@ Item {
 
             Item {
                 id: item2
-                Rectangle {
+                MenuContents {
                     anchors.fill: parent
-                    color: "blue"
                 }
             }
 
             Item {
                 id: item3
-                Rectangle {
+                AdjustContent {
                     anchors.fill: parent
-                    color: "yellow"
                 }
             }
             Item {
                 id: item4
-                Rectangle {
+                TempContents {
                     anchors.fill: parent
-                    color: "#38afb6"
                 }
             }
             Item {
