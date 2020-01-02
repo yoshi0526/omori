@@ -3,88 +3,118 @@ import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.12
 
 Item {
+    id: element
     width: 400
-    height: 600
+    height: 570
+    property alias tabBar: tabBar
 
-    TabBar {
-        id: tabBar
-        x: 0
-        y: 0
-        width: 400
-        height: 30
-        clip: true
+    Rectangle {
+        id: background
+        anchors.fill: parent
+        visible: true
 
-        Repeater {
-            model: ["Unten", "Menu", "tyousei", "Ondo", "Switch", "Manual", "Products"]
-            TabButton {
-                text: modelData
-                width: Math.max(100, tabBar.width / 6)
-                height: tabBar.height
-                background: Rectangle {
-                    color: tabBar.currentIndex == index ? "#9c95a0" : "#2f979b"
+        TabBar {
+            id: tabBar
+            width: 400
+            height: 30
+            position: TabBar.Header
+            anchors.top: parent.top
+            anchors.topMargin: 0
+            anchors.horizontalCenterOffset: 0
+            anchors.horizontalCenter: parent.horizontalCenter
+            clip: true
+
+            Repeater {
+                model: ["運転", "メニュー", "調整", "温度", "スイッチ", "手動単独", "製品変更"]
+                TabButton {
+                    text: modelData
+                    width: Math.max(100, tabBar.width / 6)
+                    height: tabBar.height
+                    background: Rectangle {
+                        color: tabBar.currentIndex == index ? "#9c95a0" : "#2f979b"
+                    }
+                }
+            }
+        }
+
+        StackLayout {
+            id: stackLayout
+            x: 0
+            y: 30
+            anchors.top: tabBar.bottom
+            anchors.right: tabBar.right
+            width: parent.width
+            height: 540
+            anchors.rightMargin: 0
+            // tabBar.height
+            anchors.topMargin: 0
+            currentIndex: tabBar.currentIndex
+            Item {
+                id: item1
+                Operation {
+                    anchors.fill: parent
+                }
+            }
+
+            Item {
+                id: item2
+                Rectangle {
+                    anchors.fill: parent
+                    color: "blue"
+                }
+            }
+
+            Item {
+                id: item3
+                Rectangle {
+                    anchors.fill: parent
+                    color: "yellow"
+                }
+            }
+            Item {
+                id: item4
+                Rectangle {
+                    anchors.fill: parent
+                    color: "#38afb6"
+                }
+            }
+            Item {
+                id: item5
+                Rectangle {
+                    anchors.fill: parent
+                    color: "#c1a0a0"
+                }
+            }
+
+            Item {
+                id: item6
+                Rectangle {
+                    anchors.fill: parent
+                    color: "#d8d781"
+                }
+            }
+
+            Item {
+                id: item7
+                Rectangle {
+                    anchors.fill: parent
+                    color: "#cd43b5"
+                }
+            }
+
+            Item {
+                id: item8
+                Conveyor {
+                    anchors.fill: parent
                 }
             }
         }
     }
-
-    StackLayout {
-        id: stackLayout
-        anchors.top: tabBar.bottom
-        anchors.right: tabBar.right
-        width: parent.width
-        height: parent.height - tabBar.height
-        currentIndex: tabBar.currentIndex
-        Item {
-            id: item1
-            Operation {
-                anchors.fill: parent
-            }
-        }
-
-        Item {
-            id: item2
-            Rectangle {
-                anchors.fill: parent
-                color: "blue"
-            }
-        }
-
-        Item {
-            id: item3
-            Rectangle {
-                anchors.fill: parent
-                color: "yellow"
-            }
-        }
-        Item {
-            id: item4
-            Rectangle {
-                anchors.fill: parent
-                color: "#38afb6"
-            }
-        }
-        Item {
-            id: item5
-            Rectangle {
-                anchors.fill: parent
-                color: "#c1a0a0"
-            }
-        }
-
-        Item {
-            id: item6
-            Rectangle {
-                anchors.fill: parent
-                color: "#d8d781"
-            }
-        }
-
-        Item {
-            id: item7
-            Rectangle {
-                anchors.fill: parent
-                color: "#cd43b5"
-            }
-        }
-    }
 }
+
+/*##^##
+Designer {
+    D{i:0;height:600;width:400}D{i:1;anchors_height:200;anchors_width:200}
+}
+##^##*/
+

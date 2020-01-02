@@ -21,7 +21,7 @@ Item {
             horizontalAlignment: Text.AlignHCenter
             anchors.verticalCenter: parent.verticalCenter
             anchors.horizontalCenter: parent.horizontalCenter
-            font.pixelSize: 20
+            font.pixelSize: 18
         }
 
         MouseArea {

@@ -3,16 +3,17 @@ import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.0
 
 PageForm {
+    id: pageForm
     width: 400
     height: 600 - 60
-    title.text: "Operation"
+    title.text: "運転画面"
     page.text: "P1000"
 
     Text {
         id: capacityTxt
         x: 21
         y: 136
-        text: qsTr("Capacity per min.")
+        text: qsTr("包装能力（個/分）")
         font.pixelSize: 25
     }
 
@@ -34,7 +35,8 @@ PageForm {
             height: 59
             btnTxt.wrapMode: Text.NoWrap
             btnTxt.textFormat: Text.PlainText
-            btnTxt.text: qsTr("Reset \n(Nagaoshi)")
+            btnTxt.text: qsTr("リセット\n(長押し)")
+            btnTxt.font.pixelSize: 18
         }
 
         Text {
@@ -48,10 +50,10 @@ PageForm {
 
         Text {
             id: capacityTxt1
-            x: 13
-            y: 23
-            text: qsTr("Num of Pkg")
-            font.pixelSize: 25
+            x: 14
+            y: 21
+            text: qsTr("包装個数")
+            font.pixelSize: 22
         }
 
         MyBtn {
@@ -60,7 +62,7 @@ PageForm {
             y: 100
             width: 120
             height: 48
-            btnTxt.text: "JOG mode"
+            btnTxt.text: qsTr("寸動運転 切")
         }
 
         MyBtn {
@@ -69,7 +71,9 @@ PageForm {
             y: 100
             width: 120
             height: 48
-            btnTxt.text: "Top S mode"
+            btnTxt.wrapMode: Text.NoWrap
+            btnTxt.font.pixelSize: 15
+            btnTxt.text: qsTr("トップシーラー\n運転")
         }
     }
 
@@ -110,24 +114,29 @@ PageForm {
     }
 
     RowLayout {
-        x: 21
+        x: 8
         y: 53
+        width: 375
+        height: 46
 
         Text {
             id: currentSpeed
-            text: qsTr("Current Speed")
+            text: qsTr("現在速度")
             font.pixelSize: 25
         }
 
         Text {
             id: speedValue
             text: qsTr("0.0")
+            Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
             font.pixelSize: 40
         }
 
         Text {
             id: unit
-            text: qsTr("per min.")
+            text: qsTr("個/分")
+            Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+            horizontalAlignment: Text.AlignRight
             font.pixelSize: 25
         }
     }
@@ -137,78 +146,37 @@ PageForm {
         x: 8
         y: 412
         width: 384
-        height: 67
+        height: 62
         color: "#a3c2c3"
+        radius: 2
 
         Text {
             id: msgTxt
-            text: "Stopping\\nBoot after long pressed button"
+            text: qsTr("停止中です。\n起動スイッチの長押しで起動可能です。")
+            wrapMode: Text.WordWrap
             anchors.rightMargin: 10
             anchors.leftMargin: 10
             anchors.fill: parent
             verticalAlignment: Text.AlignVCenter
             textFormat: Text.PlainText
-            font.pixelSize: 20
+            font.pixelSize: 18
         }
     }
 
-    RowLayout {
-        id: btmLayout
+    FooterBtns {
+        id: footerBtns
         x: 8
-        y: 479
-        width: 384
-        height: 61
-
-        Rectangle {
-            id: rectangle1
-            width: 93
-            height: 55
-            color: "#477086"
-        }
-
-        Rectangle {
-            id: rectangle2
-            width: 93
-            height: 55
-            color: "#477086"
-
-            Text {
-                id: msgTxt1
-                x: -87
-                y: -79
-                width: 93
-                color: "#ffffff"
-                text: "Ultrasonic \\nWerdering"
-                anchors.bottomMargin: 0
-                anchors.topMargin: 0
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                anchors.rightMargin: 4
-                font.pixelSize: 14
-                anchors.fill: parent
-                textFormat: Text.PlainText
-                anchors.leftMargin: 4
-            }
-        }
-
-        Rectangle {
-            id: rectangle3
-            width: 93
-            height: 55
-            color: "#477086"
-        }
-
-        Rectangle {
-            id: rectangle4
-            width: 93
-            height: 55
-            color: "#477086"
-        }
+        y: 480
+        width: parent.width
+        height: 55
+        anchors.horizontalCenter: parent.horizontalCenter
+        msgTxt2.text: "超音波\n溶着設定"
     }
 }
 
 /*##^##
 Designer {
-    D{i:17;anchors_height:42;anchors_width:223;anchors_x:18;anchors_y:8}D{i:21;anchors_height:42;anchors_width:223;anchors_x:18;anchors_y:8}
+    D{i:17;anchors_height:42;anchors_width:223;anchors_x:18;anchors_y:8}
 }
 ##^##*/
+

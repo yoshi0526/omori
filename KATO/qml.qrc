@@ -11,5 +11,8 @@
         <file>OperationForm.ui.qml</file>
         <file>MyBtn.qml</file>
         <file>MyBtnForm.ui.qml</file>
+        <file>Conveyor.qml</file>
+        <file>ConveyorForm.ui.qml</file>
+        <file>FooterBtns.ui.qml</file>
     </qresource>
 </RCC>
