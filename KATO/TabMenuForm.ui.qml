@@ -1,9 +1,9 @@
-import QtQuick 2.4
+import QtQuick 2.14
 import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.12
 
 Item {
-    id: element
+    id: tabMenu
     width: 400
     height: 570
     property alias stackLayout: stackLayout
@@ -19,17 +19,18 @@ Item {
             width: 400
             height: 30
             position: TabBar.Header
+            font.pointSize: 8
             anchors.top: parent.top
             anchors.topMargin: 0
             anchors.horizontalCenterOffset: 0
             anchors.horizontalCenter: parent.horizontalCenter
             clip: true
-
             Repeater {
                 model: ["運転", "メニュー", "調整", "温度", "スイッチ", "手動単独", "製品変更"]
                 TabButton {
+                    id: tabBtn
                     text: modelData
-                    width: Math.max(100, tabBar.width / 6)
+                    width: 57
                     height: tabBar.height
                     background: Rectangle {
                         color: tabBar.currentIndex == index ? "#9c95a0" : "#2f979b"
@@ -85,17 +86,15 @@ Item {
 
             Item {
                 id: item6
-                Rectangle {
+                ManualContents {
                     anchors.fill: parent
-                    color: "#d8d781"
                 }
             }
 
             Item {
                 id: item7
-                Rectangle {
+                ProductChgContents {
                     anchors.fill: parent
-                    color: "#cd43b5"
                 }
             }
 

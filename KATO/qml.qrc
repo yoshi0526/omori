@@ -29,5 +29,7 @@
         <file>Switches.qml</file>
         <file>SwitchesModel.qml</file>
         <file>SwitchesDelegate.qml</file>
+        <file>ManualContents.qml</file>
+        <file>ProductChgContents.qml</file>
     </qresource>
 </RCC>
