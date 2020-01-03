@@ -27,16 +27,14 @@ PageForm {
         radius: 5
         border.color: "#10a0a0"
 
-        MyBtn {
+        MyDelayBtn {
             id: resetBtn
             x: 256
             y: 8
             width: 120
             height: 59
-            btnTxt.wrapMode: Text.NoWrap
-            btnTxt.textFormat: Text.PlainText
-            btnTxt.text: qsTr("リセット\n(長押し)")
-            btnTxt.font.pixelSize: 18
+            text: qsTr("リセット\n(長押し)")
+            font.pixelSize: 16
         }
 
         Text {

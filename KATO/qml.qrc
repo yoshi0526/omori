@@ -31,5 +31,6 @@
         <file>SwitchesDelegate.qml</file>
         <file>ManualContents.qml</file>
         <file>ProductChgContents.qml</file>
+        <file>MyDelayBtn.qml</file>
     </qresource>
 </RCC>
