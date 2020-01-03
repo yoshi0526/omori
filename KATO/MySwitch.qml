@@ -5,7 +5,6 @@ Switch {
     id:control
     width: 70
     height: 40
-    text: checked ? "" : "切"
     spacing: checked ? -48 : -20
     display: AbstractButton.TextBesideIcon
     font.pointSize: 10

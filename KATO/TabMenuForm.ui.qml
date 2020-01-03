@@ -6,6 +6,7 @@ Item {
     id: element
     width: 400
     height: 570
+    property alias stackLayout: stackLayout
     property alias tabBar: tabBar
 
     Rectangle {
@@ -77,9 +78,8 @@ Item {
             }
             Item {
                 id: item5
-                Rectangle {
+                Switches {
                     anchors.fill: parent
-                    color: "#c1a0a0"
                 }
             }
 

@@ -34,6 +34,7 @@ Item {
                 x: 0
                 y: 0
                 width: 70
+                checked: stateSwitch==="on"? true:false
             }
             Text {
                 anchors.verticalCenter: switchBk.verticalCenter
@@ -46,7 +47,7 @@ Item {
         Rectangle {
             id: nameRect
             x: 0
-            width: 210
+            width: 290
             height: 40
             color: index%2==1 ? "white":"#a3c2c3"
             Text {
@@ -58,38 +59,6 @@ Item {
                 horizontalAlignment: Text.AlignRight
             }
         }
-        Rectangle {
-            id: setRect
-            x: 0
-            width: 40
-            height: 40
-            color: index%2==1 ? "white":"#a3c2c3"
-            Text {
-                anchors.fill: parent
-                text: Number(settingValue).toFixed(1)
-                anchors.rightMargin: 0
-                font.pointSize: 12
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-            }
-        }
-        Rectangle {
-            id: currentRect
-            x: 0
-            width: 40
-            height: 40
-            color: index%2==1 ? "white":"#a3c2c3"
-            Text {
-                anchors.fill: parent
-                text: Number(currentValue).toFixed(1)
-                anchors.rightMargin: 0
-                font.pointSize: 12
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-            }
-        }
-
-
     }
 }
 

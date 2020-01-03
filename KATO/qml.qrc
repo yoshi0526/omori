@@ -26,5 +26,8 @@
         <file>TempDelegate.qml</file>
         <file>TempListHeader.qml</file>
         <file>MySwitch.qml</file>
+        <file>Switches.qml</file>
+        <file>SwitchesModel.qml</file>
+        <file>SwitchesDelegate.qml</file>
     </qresource>
 </RCC>

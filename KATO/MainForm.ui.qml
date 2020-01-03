@@ -28,24 +28,28 @@ Item {
                     height: mainScreen.height
                 }
 
-                ColumnLayout {
-                    id: columnLayout
-                    width: 100
-                    height: 100
-                    spacing: 0
-
-                    Rectangle {
-                        id: rectangle
-                        width: 400
-                        height: 30
-                        color: "#ffffff"
-                    }
-
-                    ConveyorForm { height: mainScreen.height-30}
-
+                TabMenuForm {
+                    id: tabMenuRight
+                    height: mainScreen.height
+                    tabBar.currentIndex: 7
                 }
 
+                //                ColumnLayout {
+                //                    id: columnLayout
+                //                    width: 100
+                //                    height: 100
+                //                    spacing: 0
 
+                //                    Rectangle {
+                //                        id: rectangle
+                //                        width: 400
+                //                        height: 30
+                //                        color: "#ffffff"
+                //                    }
+
+                //                    ConveyorForm { height: mainScreen.height-30}
+
+                //                }
             }
         }
     }

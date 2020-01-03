@@ -2,37 +2,79 @@ import QtQuick 2.0
 
 ListModel {
     ListElement {
-        name:"ABC"
+        name:" "
+        currentValue: 0.0
+        settingValue: 0.0
+        stateSwitch: "on"
+    }
+    ListElement {
+        name:" "
+        currentValue: 0.0
+        settingValue: 0.0
+        stateSwitch: "on"
+    }
+    ListElement {
+        name:" "
+        currentValue: 0.0
+        settingValue: 0.0
+        stateSwitch: "on"
+    }
+    ListElement {
+        name:" "
+        currentValue: 0.0
+        settingValue: 0.0
+        stateSwitch: "on"
+    }
+    ListElement {
+        name:" "
+        currentValue: 0.0
+        settingValue: 0.0
+        stateSwitch: "on"
+    }
+    ListElement {
+        name:" "
+        currentValue: 0.0
+        settingValue: 0.0
+        stateSwitch: "on"
+    }
+    ListElement {
+        name:" "
+        currentValue: 0.0
+        settingValue: 0.0
+        stateSwitch: "on"
+    }
+    ListElement {
+        name:" "
+        currentValue: 0.0
+        settingValue: 0.0
+        stateSwitch: "on"
+    }
+    ListElement {
+        name:" "
         currentValue: 1.0
         settingValue: 2.0
         stateSwitch: "on"
     }
     ListElement {
-        name:"DEF"
+        name:" "
         currentValue: 1.0
         settingValue: 2.0
         stateSwitch: "on"
     }
     ListElement {
-        name:"GHI"
+        name:" "
         currentValue: 1.0
         settingValue: 2.0
         stateSwitch: "on"
     }
     ListElement {
-        name:"JKL"
+        name:" "
         currentValue: 1.0
         settingValue: 2.0
         stateSwitch: "on"
     }
     ListElement {
-        name:"MNO"
-        currentValue: 1.0
-        settingValue: 2.0
-        stateSwitch: "on"
-    }
-    ListElement {
-        name:"PQR"
+        name:" "
         currentValue: 1.0
         settingValue: 2.0
         stateSwitch: "on"
