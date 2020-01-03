@@ -5,5 +5,18 @@ PageForm {
     height: 600 - 60
     title.text: "温度設定"
     page.text: "P300"
-
+    ListView {
+        id: listView
+        y: 30
+        clip: true
+        height: 510
+        width: 400
+        header: TempListHeader {
+            z: 2
+        }
+        anchors.topMargin: 32
+        anchors.fill: parent
+        delegate: TempDelegate{}
+        model: TempModel{}
+    }
 }

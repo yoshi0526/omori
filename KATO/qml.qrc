@@ -22,5 +22,9 @@
         <file>AdjustModel.qml</file>
         <file>AdjustDelegate.qml</file>
         <file>TempContents.qml</file>
+        <file>TempModel.qml</file>
+        <file>TempDelegate.qml</file>
+        <file>TempListHeader.qml</file>
+        <file>MySwitch.qml</file>
     </qresource>
 </RCC>
