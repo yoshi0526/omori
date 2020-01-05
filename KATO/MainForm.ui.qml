@@ -28,6 +28,7 @@ Item {
                 TabMenu {
                     id: tabMenuLeft
                     height: mainScreen.height
+                    z: 2
                 }
 
                 TabMenu {
