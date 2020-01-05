@@ -6,6 +6,12 @@ PageForm {
     id: pageForm
     width: 400
     height: 600 - 60
+    property alias downBtn: downBtn
+    property alias upBtn: upBtn
+    property alias resetBtn: resetBtn
+    property real speedValue: 0
+    property real abilityValue: 100
+    property int pkgNumValue: 20
     title.text: "運転画面"
     page.text: "P1000"
 
@@ -41,7 +47,7 @@ PageForm {
             id: pkgNum
             x: 175
             y: 14
-            text: qsTr("387")
+            text: pageForm.pkgNumValue
             textFormat: Text.PlainText
             font.pixelSize: 40
         }
@@ -80,7 +86,7 @@ PageForm {
         y: 174
 
         MyBtn {
-            id: upBtn
+            id: downBtn
             Layout.preferredHeight: 60
             Layout.preferredWidth: 80
             btnTxt.text: "\u25bc"
@@ -89,8 +95,8 @@ PageForm {
         }
 
         TextField {
-            id: textField
-            text: qsTr("100.0")
+            id: abilityValueField
+            text: pageForm.abilityValue.toFixed(1)
             Layout.preferredHeight: 60
             Layout.preferredWidth: 112
             font.pointSize: 30
@@ -99,7 +105,7 @@ PageForm {
         }
 
         MyBtn {
-            id: downBtn
+            id: upBtn
             Layout.preferredHeight: 60
             Layout.preferredWidth: 80
             btnTxt.horizontalAlignment: Text.AlignHCenter
@@ -125,7 +131,7 @@ PageForm {
 
         Text {
             id: speedValue
-            text: qsTr("0.0")
+            text: pageForm.speedValue.toFixed(1)
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
             font.pixelSize: 40
         }
@@ -174,7 +180,7 @@ PageForm {
 
 /*##^##
 Designer {
-    D{i:17;anchors_height:42;anchors_width:223;anchors_x:18;anchors_y:8}
+    D{i:0;height:540;width:400}D{i:17;anchors_height:42;anchors_width:223;anchors_x:18;anchors_y:8}
 }
 ##^##*/
 

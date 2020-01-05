@@ -3,6 +3,7 @@ import QtQuick 2.0
 PageForm {
     width: 400
     height: 600 - 60
+    property alias listView: listView
     title.text: "調整"
     page.text: "P200"
 
@@ -14,7 +15,7 @@ PageForm {
         anchors.topMargin: 32
         anchors.fill: parent
         delegate:AdjustDelegate {}
-        model:AdjustModel {}
+//        model:AdjustModel {}
     }
 
 }

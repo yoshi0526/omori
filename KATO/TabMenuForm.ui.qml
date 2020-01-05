@@ -6,6 +6,10 @@ Item {
     id: tabMenu
     width: 400
     height: 570
+    property alias operationContents: operationContents
+    property alias switches: switches
+    property alias tempContents: tempContents
+    property alias adjustContent: adjustContent
     property alias stackLayout: stackLayout
     property alias tabBar: tabBar
 
@@ -54,6 +58,7 @@ Item {
             Item {
                 id: item1
                 Operation {
+                    id: operationContents
                     anchors.fill: parent
                 }
             }
@@ -61,6 +66,7 @@ Item {
             Item {
                 id: item2
                 MenuContents {
+                    id: menuContents
                     anchors.fill: parent
                 }
             }
@@ -68,18 +74,21 @@ Item {
             Item {
                 id: item3
                 AdjustContent {
+                    id: adjustContent
                     anchors.fill: parent
                 }
             }
             Item {
                 id: item4
                 TempContents {
+                    id: tempContents
                     anchors.fill: parent
                 }
             }
             Item {
                 id: item5
                 Switches {
+                    id: switches
                     anchors.fill: parent
                 }
             }

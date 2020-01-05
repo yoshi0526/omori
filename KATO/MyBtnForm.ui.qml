@@ -79,7 +79,7 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;height:40;width:40}
+    D{i:0;height:60;width:80}
 }
 ##^##*/
 

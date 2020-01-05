@@ -11,13 +11,13 @@ ListModel {
         name:" "
         currentValue: 0.0
         settingValue: 0.0
-        stateSwitch: "on"
+        stateSwitch: "off"
     }
     ListElement {
         name:" "
         currentValue: 0.0
         settingValue: 0.0
-        stateSwitch: "on"
+        stateSwitch: "off"
     }
     ListElement {
         name:" "

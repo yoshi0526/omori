@@ -8,6 +8,7 @@ Rectangle {
     height: 80
     clip: true
     radius: 5
+    property alias control: control
     property alias text: control.text
     property alias font: control.font
     border.width: 2
@@ -31,8 +32,7 @@ Rectangle {
               horizontalAlignment: Text.AlignHCenter
               verticalAlignment: Text.AlignVCenter
 //              elide: Text.ElideRight
-          }
-
+          }          
           background: Rectangle {
               implicitWidth: 100
               implicitHeight: 40
@@ -52,6 +52,6 @@ Rectangle {
 
 /*##^##
 Designer {
-    D{i:1;anchors_x:12;anchors_y:8}
+    D{i:0;height:59;width:120}D{i:1;anchors_x:12;anchors_y:8}
 }
 ##^##*/

@@ -34,6 +34,7 @@ Item {
                 x: 0
                 y: 0
                 width: 70
+                checked: stateSwitch=="on"? true:false
             }
             Text {
                 anchors.verticalCenter: switchBk.verticalCenter
