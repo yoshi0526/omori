@@ -32,4 +32,11 @@ MainForm {
     tabMenuLeft.operationContents.upBtn.onPressed: backend.pkgSpeedCfg++;
     tabMenuLeft.operationContents.downBtn.onPressed: backend.pkgSpeedCfg--;
     tabMenuLeft.operationContents.resetBtn.control.onActivated: backend.reset();
+
+    tabMenuRight.operationContents.abilityValue: backend.pkgSpeedCfg
+    tabMenuRight.operationContents.pkgNumValue: backend.numOfPkg
+    tabMenuRight.operationContents.speedValue: backend.pkgSpeedValue
+    tabMenuRight.operationContents.upBtn.onPressed: backend.pkgSpeedCfg++;
+    tabMenuRight.operationContents.downBtn.onPressed: backend.pkgSpeedCfg--;
+    tabMenuRight.operationContents.resetBtn.control.onActivated: backend.reset();
 }

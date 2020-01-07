@@ -87,6 +87,8 @@ PageForm {
 
         MyBtn {
             id: downBtn
+            btnTxt.verticalAlignment: Text.AlignVCenter
+            btnTxt.horizontalAlignment: Text.AlignHCenter
             Layout.preferredHeight: 60
             Layout.preferredWidth: 80
             btnTxt.text: "\u25bc"
@@ -98,7 +100,7 @@ PageForm {
             id: abilityValueField
             text: pageForm.abilityValue.toFixed(1)
             Layout.preferredHeight: 60
-            Layout.preferredWidth: 112
+            Layout.preferredWidth: 140
             font.pointSize: 30
             horizontalAlignment: Text.AlignRight
             placeholderText: "0.0"

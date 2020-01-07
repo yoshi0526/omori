@@ -4,7 +4,7 @@ ListModel {
     ListElement {
         name:"AAA"
         on:"0.0"
-        off:"151.0"
+        off:"51.0"
     }
     ListElement {
         name:""

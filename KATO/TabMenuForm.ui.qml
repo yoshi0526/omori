@@ -1,4 +1,4 @@
-import QtQuick 2.14
+import QtQuick 2.12
 import QtQuick.Controls 2.13
 import QtQuick.Layouts 1.12
 
@@ -117,9 +117,5 @@ Item {
     }
 }
 
-/*##^##
-Designer {
-    D{i:0;height:600;width:400}D{i:1;anchors_height:200;anchors_width:200}
-}
-##^##*/
+
 

@@ -40,6 +40,7 @@ Item {
                 anchors.verticalCenter: switchBk.verticalCenter
                 id: switchTxt
                 text: mySwitch.checked? qsTr("入") : qsTr("切")
+                font.pointSize: 8
                 x: mySwitch.checked? 15:40
                 color: mySwitch.checked? "#ffffff" : "#000000"
             }
