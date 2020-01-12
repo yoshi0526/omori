@@ -35,6 +35,13 @@ Item {
                 y: 0
                 width: 70
                 checked: stateSwitch=="on"? true:false
+                onToggled: {
+                    console.log("toggled:" + mySwitch.checked)
+                    if(mySwitch.checked)
+                        stateSwitch="on"
+                    else
+                        stateSwitch="off"
+                }
             }
             Text {
                 anchors.verticalCenter: switchBk.verticalCenter
