@@ -4,8 +4,8 @@ import QtQuick.Controls 2.12
 
 PageForm {
     id: pageForm
-    width: 400
-    height: 600 - 60
+    width: tabMenu.width // 400
+    height: tabMenu.height - header.height //  600 - 60
     property alias footerBtns: footerBtns
     title.text: "コンベアカム"
     page.text: "P350"

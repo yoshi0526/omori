@@ -1,11 +1,11 @@
 import QtQuick 2.12
-import QtQuick.Controls 2.13
+import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 
 Item {
     id: tabMenu
-    width: 400
-    height: 570
+    //    width: 400
+    //    height: 570
     property alias operationContents: operationContents
     property alias switches: switches
     property alias tempContents: tempContents
@@ -20,8 +20,8 @@ Item {
 
         TabBar {
             id: tabBar
-            width: 400
-            height: 30
+            width: tabMenu.width
+            height: header.height
             position: TabBar.Header
             font.pointSize: 8
             anchors.top: parent.top
@@ -37,7 +37,7 @@ Item {
                     width: 57
                     height: tabBar.height
                     background: Rectangle {
-                        color: tabBar.currentIndex == index ? "#9c95a0" : "#2f979b"
+                        color: tabBar.currentIndex === index ? "#9c95a0" : "#2f979b"
                     }
                 }
             }
@@ -45,12 +45,10 @@ Item {
 
         StackLayout {
             id: stackLayout
-            x: 0
-            y: 30
             anchors.top: tabBar.bottom
             anchors.right: tabBar.right
             width: parent.width
-            height: 540
+            height: tabMenu.height - tabBar.height
             anchors.rightMargin: 0
             // tabBar.height
             anchors.topMargin: 0
@@ -116,6 +114,3 @@ Item {
         }
     }
 }
-
-
-

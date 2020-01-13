@@ -13,10 +13,12 @@ Item {
         spacing: 0
         Header {
             id: header
+            width: mainElement.width
+            height: mainElement.height / 20
         }
         Item {
             id: mainScreen
-            width: 800 - rowLayout.spacing
+            width: mainElement.width - rowLayout.spacing
             height: mainElement.height - header.height
 
             RowLayout {
@@ -27,12 +29,14 @@ Item {
 
                 TabMenu {
                     id: tabMenuLeft
+                    width: mainScreen.width / 2
                     height: mainScreen.height
                     z: 2
                 }
 
                 TabMenu {
                     id: tabMenuRight
+                    width: mainScreen.width / 2
                     height: mainScreen.height
                 }
             }

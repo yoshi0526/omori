@@ -3,8 +3,8 @@ import QtQuick.Layouts 1.0
 
 Item {
     id:header
-    width: 800
-    height: 30
+//    width: 800
+//    height: 30
 
     property string currentDateTime: ""
 

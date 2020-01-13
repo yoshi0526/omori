@@ -1,8 +1,8 @@
 import QtQuick 2.0
 
 PageForm {
-    width: 400
-    height: 600 - 60
+    width: tabMenu.width // 400
+    height: tabMenu.height - header.height //  600 - 60
     title.text: "スイッチ画面"
     page.text: "P140"
     ListView {

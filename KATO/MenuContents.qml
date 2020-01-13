@@ -2,8 +2,8 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.0
 
 PageForm {
-    width: 400
-    height: 600 - 60
+    width: tabMenu.width // 400
+    height: tabMenu.height - header.height //  600 - 60
     title.text: "メニュー"
     page.text: "P131"
 

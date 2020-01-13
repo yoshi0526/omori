@@ -4,8 +4,8 @@ import QtQuick.Layouts 1.0
 
 PageForm {
     id: pageForm
-    width: 400
-    height: 600 - 60
+    width: tabMenu.width // 400
+    height: tabMenu.height - header.height //  600 - 60
     property alias downBtn: downBtn
     property alias upBtn: upBtn
     property alias resetBtn: resetBtn
@@ -179,10 +179,3 @@ PageForm {
         msgTxt2.text: "超音波\n溶着設定"
     }
 }
-
-/*##^##
-Designer {
-    D{i:0;height:540;width:400}D{i:17;anchors_height:42;anchors_width:223;anchors_x:18;anchors_y:8}
-}
-##^##*/
-
