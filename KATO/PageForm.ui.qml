@@ -1,8 +1,9 @@
 import QtQuick 2.4
 
 Item {
-    width: 400
-    height: 550
+    id: root
+    width: tabMenu.width // 400
+    height: tabMenu.height - header.height //  600 - 60
     property alias page: page
     property alias title: title
 
@@ -13,7 +14,7 @@ Item {
 
         Rectangle {
             id: header
-            width: 400
+            width: root.width
             height: 32
             color: "#187677"
 

@@ -34,7 +34,7 @@ Item {
                 TabButton {
                     id: tabBtn
                     text: modelData
-                    width: 57
+                    width: tabMenu.width / 7
                     height: tabBar.height
                     background: Rectangle {
                         color: tabBar.currentIndex === index ? "#9c95a0" : "#2f979b"
