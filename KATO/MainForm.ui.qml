@@ -4,40 +4,49 @@ import QtQuick.Controls 2.12
 
 Item {
     id: mainElement
-    width: 800 // 800
-    height: 600 // 600
+    width: 1000 // 800
+    height: 500 // 600
     property alias tabMenuRight: tabMenuRight
     property alias tabMenuLeft: tabMenuLeft
 
-    Column {
+    ColumnLayout {
+        id: mainLayout
+        anchors.fill: parent
         spacing: 0
         Header {
             id: header
-            width: mainElement.width
-            height: mainElement.height / 20
+            Layout.fillWidth: true
+            Layout.preferredWidth: 800 // mainElement.width
+            Layout.preferredHeight: 30 // mainElement.height/20
+            //            width: mainElement.width
+            //            height: mainElement.height / 20
         }
         Item {
             id: mainScreen
-            width: mainElement.width - rowLayout.spacing
-            height: mainElement.height - header.height
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.preferredWidth: mainElement.width - rowLayout.spacing
+            Layout.preferredHeight: mainElement.height - header.height
 
             RowLayout {
                 id: rowLayout
-                x: 0
-                y: 0
+                //                x: 0
+                //                y: 0
                 spacing: 1
 
                 TabMenu {
                     id: tabMenuLeft
-                    width: mainScreen.width / 2
-                    height: mainScreen.height
+                    Layout.fillWidth: true
+                    Layout.preferredWidth: mainScreen.width / 2
+                    Layout.preferredHeight: mainScreen.height
                     z: 2
                 }
 
                 TabMenu {
                     id: tabMenuRight
-                    width: mainScreen.width / 2
-                    height: mainScreen.height
+                    Layout.fillWidth: true
+                    Layout.preferredWidth: mainScreen.width / 2
+                    Layout.preferredHeight: mainScreen.height
                 }
             }
         }

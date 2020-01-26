@@ -1,9 +1,10 @@
 import QtQuick 2.0
+import QtQuick.Layouts 1.12
 
 Item {
     width: 400
     height: 40
-    Row {
+    RowLayout {
         anchors.fill: parent
         spacing: 1
         Rectangle {
@@ -24,6 +25,7 @@ Item {
             id: nameRect
             height: 40
             width: 240
+            Layout.fillWidth: true
             Text {
                 color: "#ffffff"
                 text: "名称"

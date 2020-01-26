@@ -18,7 +18,8 @@ Item {
 
         Rectangle {
             id: rectangle1
-            width: 99
+            Layout.fillWidth: true
+            Layout.preferredWidth: 99
             height: 55
             color: "#477086"
 
@@ -44,7 +45,8 @@ Item {
 
         Rectangle {
             id: rectangle2
-            width: 99
+            Layout.fillWidth: true
+            Layout.preferredWidth: 99
             height: 55
             color: "#477086"
 
@@ -70,7 +72,8 @@ Item {
 
         Rectangle {
             id: rectangle3
-            width: 99
+            Layout.fillWidth: true
+            Layout.preferredWidth: 99
             height: 55
             color: "#477086"
 
@@ -96,7 +99,8 @@ Item {
 
         Rectangle {
             id: rectangle4
-            width: 99
+            Layout.fillWidth: true
+            Layout.preferredWidth: 99
             height: 55
             color: "#477086"
 
@@ -127,3 +131,4 @@ Designer {
     D{i:0;height:55;width:384}
 }
 ##^##*/
+

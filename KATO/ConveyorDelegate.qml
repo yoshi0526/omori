@@ -1,10 +1,11 @@
 import QtQuick 2.0
+import QtQuick.Layouts 1.12
 
 Item {
     width: 400
     height: 40
     id:converyDelegate
-    Row {
+    RowLayout {
         id: delegateRow
         anchors.fill: parent
         spacing: 1
@@ -38,6 +39,7 @@ Item {
         }
         Rectangle {
             id: nameRect
+            Layout.fillWidth: true
             width: 240
             height: 40
             Text {
@@ -84,8 +86,4 @@ Item {
     }
 }
 
-/*##^##
-Designer {
-    D{i:5;anchors_width:200}
-}
-##^##*/
+
