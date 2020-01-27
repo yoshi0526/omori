@@ -21,6 +21,7 @@ PageForm {
         anchors.bottomMargin: 0
         anchors.top: parent.top
         anchors.topMargin: 30
+        spacing: 1
 
         RowLayout {
             Layout.preferredWidth: pageForm.width - msgRect.x * 2
