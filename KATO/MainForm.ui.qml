@@ -4,8 +4,8 @@ import QtQuick.Controls 2.12
 
 Item {
     id: mainElement
-    width: 1000 // 800
-    height: 500 // 600
+    width: 800 // 800
+    height: 480 // 600
     property alias tabMenuRight: tabMenuRight
     property alias tabMenuLeft: tabMenuLeft
 

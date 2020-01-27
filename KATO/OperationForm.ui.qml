@@ -5,7 +5,7 @@ import QtQuick.Layouts 1.0
 PageForm {
     id: pageForm
     width: 400 // tabMenu.width // 400
-    height: 540 // tabMenu.height - header.height //  600 - 60
+    height: 420 // tabMenu.height - header.height //  600 - 60
     property alias downBtn: downBtn
     property alias upBtn: upBtn
     property alias resetBtn: resetBtn
@@ -17,14 +17,14 @@ PageForm {
 
     ColumnLayout {
         x: 0
-        anchors.bottom: parent.bottom
+        anchors.bottom: footerBtns.top
         anchors.bottomMargin: 0
         anchors.top: parent.top
         anchors.topMargin: 30
 
         RowLayout {
             Layout.preferredWidth: pageForm.width - msgRect.x * 2
-            Layout.preferredHeight: 46
+            Layout.preferredHeight: 20
 
             Text {
                 id: currentSpeed
@@ -53,10 +53,12 @@ PageForm {
             text: qsTr("包装能力（個/分）")
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             font.pixelSize: 25
+            Layout.preferredHeight: 30
         }
 
         RowLayout {
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.preferredHeight: 30
             MyBtn {
                 id: downBtn
                 btnTxt.verticalAlignment: Text.AlignVCenter
@@ -96,7 +98,7 @@ PageForm {
             Layout.preferredWidth: pageForm.width - rectangle.x * 2
             color: "#ffffff"
             radius: 5
-            Layout.preferredHeight: 158
+            Layout.preferredHeight: 120
             border.color: "#10a0a0"
 
             MyDelayBtn {
@@ -104,7 +106,7 @@ PageForm {
                 x: 256
                 y: 8
                 width: 120
-                height: 59
+                height: 50
                 text: qsTr("リセット\n(長押し)")
                 font.pixelSize: 16
             }
@@ -132,6 +134,8 @@ PageForm {
                 y: 100
                 width: 120
                 height: 48
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 5
                 btnTxt.text: qsTr("寸動運転 切")
             }
 
@@ -141,6 +145,8 @@ PageForm {
                 y: 100
                 width: 120
                 height: 48
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 5
                 btnTxt.wrapMode: Text.NoWrap
                 btnTxt.font.pixelSize: 15
                 btnTxt.text: qsTr("トップシーラー\n運転")
@@ -166,13 +172,15 @@ PageForm {
                 font.pixelSize: 18
             }
         }
+    }
 
-        FooterBtns {
-            id: footerBtns
-            Layout.preferredWidth: pageForm.width
-            Layout.preferredHeight: 55
-            msgTxt2.text: "超音波\n溶着設定"
-        }
+    FooterBtns {
+        id: footerBtns
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 0
+        Layout.preferredWidth: pageForm.width
+        Layout.preferredHeight: 55
+        msgTxt2.text: "超音波\n溶着設定"
     }
 }
 

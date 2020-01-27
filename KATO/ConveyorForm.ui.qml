@@ -24,7 +24,7 @@ PageForm {
         Item {
             id: opeItems
             height: 40
-            Layout.preferredHeight: 80
+            Layout.preferredHeight: 70
             Layout.preferredWidth: pageForm.width
 
             RowLayout {
@@ -84,7 +84,7 @@ PageForm {
 
         FooterBtns {
             id: footerBtns
-            Layout.bottomMargin: 4
+            Layout.bottomMargin: 0
             Layout.preferredWidth: pageForm.width
             Layout.preferredHeight: 55
             msgTxt1.text: "<"
